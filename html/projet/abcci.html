@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABCCI - WebApp</title>
+    <link rel="stylesheet" href="../../css/projet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Bocquet Mathéo</div>
+            <a href="../index.html" class="bouton-retour"><i class="fas fa-arrow-left"></i> Retour au Portfolio</a>
+            <div class="bascule-theme">
+                <input type="checkbox" id="interrupteur-theme" class="input-bascule-theme">
+                <label for="interrupteur-theme" class="etiquette-bascule-theme">
+                    <span class="icone-bascule-theme">☀️</span>
+                </label>
+            </div>
+        </nav>
+    </header>
+
+    <main class="conteneur-projet">
+        <div class="entete-projet">
+            <h1 class="titre-projet">ABCCI - WebApp</h1>
+            <p class="sous-titre-projet">Une solution de visualisation de données pour le suivi des performances</p>
+            
+            <div class="badges-projet">
+                <span class="badge">React</span>
+                <span class="badge">Node.js</span>
+                <span class="badge">MongoDB</span>
+                <span class="badge">Chart.js</span>
+            </div>
+        </div>
+
+        <div class="conteneur-image-projet">
+            <img src="../assets/projects/analytics-dashboard.jpg" alt="Aperçu du tableau de bord analytics" class="image-projet">
+        </div>
+
+        <div class="contenu-projet">
+            <div class="description-projet">
+                <h2>À propos du projet</h2>
+                <p>Ce projet est un tableau de bord de visualisation de données analytiques développé pour offrir une vue d'ensemble claire des performances d'une entreprise. Il permet d'analyser les tendances, de suivre les indicateurs clés de performance et de prendre des décisions basées sur des données concrètes.</p>
+                
+                <p>Les fonctionnalités principales incluent :</p>
+                <ul>
+                    <li>Visualisation en temps réel des formations</li>
+                    <li>Système de discussion instantannée avec les formateurs</li>
+                    <li>Possibilité d'effectuer un Quiz avec système de badge</li>
+                    <li>Capacité en tant que formateur ou administrateur d'envoyer des notifications sur la webapp</li>
+                    <li>Système d'authentification et gestion des permissions grâce à des rôles</li>
+                </ul>
+            </div>
+
+            <div class="details-projet">
+                <h3>Détails techniques</h3>
+                <ul class="liste-info-projet">
+                    <li>
+                        <i class="fas fa-code"></i>
+                        <span><strong>Frontend:</strong> HTML, CSS, JavaScript (Symfony Twig)</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-server"></i>
+                        <span><strong>Backend:</strong> PHP (Symfony)</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-database"></i>
+                        <span><strong>Base de données:</strong> MySQL</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-calendar"></i>
+                        <span><strong>Durée:</strong> 2 mois</span>
+                    </li>
+                </ul>
+            </div>            
+        </div>
+
+        <div class="galerie-projet">
+            <h2 class="titre-galerie">Galerie du projet</h2>
+            <div class="grille-galerie">
+                <div class="element-galerie">
+                    <img src="../assets/projects/analytics-1.jpg" alt="Vue des analyses" class="image-galerie">
+                </div>
+                <div class="element-galerie">
+                    <img src="../assets/projects/analytics-2.jpg" alt="Tableau des KPIs" class="image-galerie">
+                </div>
+                <div class="element-galerie">
+                    <img src="../assets/projects/analytics-3.jpg" alt="Interface mobile" class="image-galerie">
+                </div>
+            </div>
+        </div>
+
+        <div class="caracteristique-projet">
+            <h2>Défis et Solutions</h2>
+            <p>L'un des principaux défis de ce projet était de concevoir une interface intuitive capable de présenter des données complexes de manière compréhensible. La solution a été de travailler étroitement avec des experts en UX/UI pour créer des visualisations claires et des tableaux de bord personnalisables selon les besoins spécifiques des utilisateurs.</p>
+            
+            <p>Un autre défi était de garantir des performances optimales malgré de grands volumes de données. Nous avons résolu ce problème en mettant en place un système de mise en cache efficace et en optimisant les requêtes à la base de données.</p>
+        </div>
+
+        <div class="liens-projet">
+            <a href="https://github.com/BocquetMa/analytics-dashboard" target="_blank" class="lien-projet">
+                <i class="fab fa-github"></i> Voir le code
+            </a>
+            <a href="https://analytics-dashboard-demo.example.com" target="_blank" class="lien-projet">
+                <i class="fas fa-external-link-alt"></i> Démo en ligne
+            </a>
+        </div>
+
+        <div class="vitrine-fonctionnalites">
+            <h2 class="titre-section">Fonctionnalités détaillées</h2>
+            
+            <div class="element-fonctionnalite">
+                <div class="contenu-fonctionnalite">
+                    <h3>Visualisation en temps réel des formations</h3>
+                    <p>Notre interface permet aux utilisateurs de consulter l'ensemble des formations disponibles avec un système de filtrage avancé. Les formateurs peuvent suivre les inscriptions en temps réel.</p>
+                    <ul class="points-fonctionnalite">
+                        <li>Filtrage par catégorie, date et niveau</li>
+                        <li>Affichage des places disponibles en temps réel</li>
+                        <li>Notifications de changements de statut</li>
+                    </ul>
+                </div>
+                <div class="demo-fonctionnalite">
+                    <img src="../../assets/images/projets/abcci/abcci-formations.png" alt="Démonstration des formations" class="image-demo">
+                    <div class="superposition-video">
+                        <a href="#" class="bouton-lecture" data-video="../../assets/videos/abcci-formation.mp4">
+                            <i class="fas fa-play"></i> Voir la démo
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="element-fonctionnalite">
+                <div class="contenu-fonctionnalite">
+                    <h3>Système de discussion instantanée</h3>
+                    <p>Les apprenants peuvent communiquer directement avec leurs formateurs via notre système de messagerie intégré, facilitant les échanges et le suivi personnalisé.</p>
+                    <ul class="points-fonctionnalite">
+                        <li>Discussions en temps réel</li>
+                        <li>Partage de fichiers et de ressources</li>
+                        <li>Historique des conversations</li>
+                    </ul>
+                </div>
+                <div class="demo-fonctionnalite">
+                    <img src="../assets/demos/chat-demo.jpg" alt="Démonstration du chat" class="image-demo">
+                    <div class="superposition-video">
+                        <a href="#" class="bouton-lecture" data-video="../assets/demos/chat-demo.mp4">
+                            <i class="fas fa-play"></i> Voir la démo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Bocquet Mathéo. Tous droits réservés.</p>
+    </footer>
+
+
+    <script src="../../js/bascule-theme.js"></script>
+    <script src="../../js/modal-video.js"></script>
+</body>
+</html>

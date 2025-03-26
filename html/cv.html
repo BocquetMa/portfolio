@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Bocquet Mathéo</title>
+    <link rel="stylesheet" href="../css/cv.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <style>
+        /* Variables et Reset */
+:root {
+    --couleur-primaire: #6351ce;
+    --couleur-secondaire: #8478d9;
+    --couleur-tertiaire: #4a3cb7;
+    --couleur-fond: #f5f5f9;
+    --couleur-fond-carte: #ffffff;
+    --couleur-texte: #333333;
+    --couleur-texte-clair: #777777;
+    --couleur-bordure: #e0e0e0;
+    --ombre-box: 0 8px 20px rgba(0, 0, 0, 0.1);
+    --rayon-bordure: 12px;
+    --transition: all 0.3s ease;
+}
+
+.theme-sombre {
+    --couleur-primaire: #8478d9;
+    --couleur-secondaire: #6351ce;
+    --couleur-tertiaire: #a395e9;
+    --couleur-fond: #1a1a2e;
+    --couleur-fond-carte: #252538;
+    --couleur-texte: #f0f0f0;
+    --couleur-texte-clair: #b0b0b0;
+    --couleur-bordure: #444444;
+    --ombre-box: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+    background-color: var(--couleur-fond);
+    color: var(--couleur-texte);
+    line-height: 1.6;
+    transition: var(--transition);
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* Structure principale */
+.conteneur-cv {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    position: relative;
+}
+
+/* En-tête du CV */
+.entete-cv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--couleur-fond-carte);
+    border-radius: var(--rayon-bordure);
+    padding: 2rem;
+    box-shadow: var(--ombre-box);
+    margin-bottom: 1.5rem;
+}
+
+.info-profil {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.photo-profil {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--couleur-primaire);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.photo-profil img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.details-profil h1 {
+    font-size: 2rem;
+    color: var(--couleur-texte);
+    margin-bottom: 0.5rem;
+}
+
+.details-profil h1 span {
+    font-weight: 400;
+}
+
+.titre-poste {
+    color: var(--couleur-primaire);
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+.objectif {
+    color: var(--couleur-texte-clair);
+    font-size: 0.9rem;
+}
+
+.actions-cv {
+    display: flex;
+    gap: 1rem;
+}
+
+.bouton-telecharger {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--couleur-primaire);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.bouton-telecharger:hover {
+    background-color: var(--couleur-tertiaire);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.bouton-theme {
+    background-color: var(--couleur-fond-carte);
+    border: 2px solid var(--couleur-bordure);
+    color: var(--couleur-primaire);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.bouton-theme:hover {
+    background-color: var(--couleur-primaire);
+    color: white;
+}
+
+/* Navigation par onglets */
+.navigation-cv {
+    display: flex;
+    background-color: var(--couleur-fond-carte);
+    border-radius: var(--rayon-bordure);
+    overflow: hidden;
+    box-shadow: var(--ombre-box);
+    margin-bottom: 1.5rem;
+}
+
+.onglet {
+    flex: 1;
+    padding: 1rem;
+    border: none;
+    background-color: transparent;
+    color: var(--couleur-texte);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    border-bottom: 3px solid transparent;
+}
+
+.onglet:hover {
+    background-color: rgba(99, 81, 206, 0.1);
+}
+
+.onglet.actif {
+    color: var(--couleur-primaire);
+    border-bottom: 3px solid var(--couleur-primaire);
+}
+
+/* Contenu des sections */
+.contenu-cv {
+    background-color: var(--couleur-fond-carte);
+    border-radius: var(--rayon-bordure);
+    padding: 2rem;
+    box-shadow: var(--ombre-box);
+    min-height: 500px;
+}
+
+.section-cv {
+    display: none;
+}
+
+.section-cv.actif {
+    display: block;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Style des cartes */
+.carte {
+    background-color: var(--couleur-fond-carte);
+    border-radius: var(--rayon-bordure);
+    overflow: hidden;
+    border: 1px solid var(--couleur-bordure);
+    margin-bottom: 1.5rem;
+    transition: var(--transition);
+}
+
+.carte:hover {
+    box-shadow: var(--ombre-box);
+    transform: translateY(-5px);
+}
+
+.carte-entete {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgba(99, 81, 206, 0.1);
+    border-bottom: 1px solid var(--couleur-bordure);
+}
+
+.carte-entete i {
+    color: var(--couleur-primaire);
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.carte-entete h2 {
+    color: var(--couleur-primaire);
+    font-size: 1.2rem;
+}
+
+.carte-corps {
+    padding: 1.5rem;
+}
+
+/* Infos personnelles */
+.info-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.item-contact {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.item-contact i {
+    color: var(--couleur-primaire);
+    font-size: 1.2rem;
+    width: 20px;
+    text-align: center;
+}
+
+.texte-presentation {
+    line-height: 1.8;
+    color: var(--couleur-texte);
+}
+
+/* Timeline pour formation et expérience */
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: var(--couleur-bordure);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2.5rem;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-date {
+    font-weight: 600;
+    color: var(--couleur-primaire);
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.timeline-date::before {
+    content: '';
+    position: absolute;
+    left: -2rem;
+    top: 0.5rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--couleur-primaire);
+    box-shadow: 0 0 0 3px rgba(99, 81, 206, 0.2);
+}
+
+.timeline-content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.lieu {
+    color: var(--couleur-texte-clair);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.mentions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.8rem;
+}
+
+.mention {
+    background-color: rgba(99, 81, 206, 0.1);
+    color: var(--couleur-primaire);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+}
+
+.liste-taches {
+    list-style-type: none;
+    margin-top: 0.8rem;
+}
+
+.liste-taches li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.liste-taches li::before {
+    content: '→';
+    color: var(--couleur-primaire);
+    position: absolute;
+    left: 0;
+}
+
+/* Compétences */
+.grille-competences {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.categorie-competence {
+    margin-bottom: 1.5rem;
+}
+
+.categorie-competence h3 {
+    color: var(--couleur-primaire);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--couleur-bordure);
+}
+
+.competences-liste {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.competence-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.niveau-competence {
+    height: 8px;
+    background-color: rgba(99, 81, 206, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.niveau-competence .barre {
+    height: 100%;
+    background-color: var(--couleur-primaire);
+    border-radius: 4px;
+    transition: width 1s ease-out;
+}
+
+.competences-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.tag-competence {
+    background-color: rgba(99, 81, 206, 0.1);
+    color: var(--couleur-primaire);
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.tag-competence:hover {
+    background-color: var(--couleur-primaire);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Langues */
+.langues-liste {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.langue-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.langue-nom {
+    font-weight: 600;
+}
+
+.langue-niveau {
+    display: flex;
+    align-items: center;
+}
+
+.niveau-point {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(99, 81, 206, 0.2);
+    margin-right: 5px;
+}
+
+.niveau-point.actif {
+    background-color: var(--couleur-primaire);
+}
+
+.niveau-texte {
+    margin-left: 10px;
+    font-size: 0.9rem;
+    color: var(--couleur-texte-clair);
+}
+
+/* Centres d'intérêt */
+.interets-grille {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1.5rem;
+}
+
+.interet-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.8rem;
+    padding: 1.5rem 1rem;
+    background-color: rgba(99, 81, 206, 0.05);
+    border-radius: var(--rayon-bordure);
+    transition: var(--transition);
+}
+
+.interet-item:hover {
+    background-color: rgba(99, 81, 206, 0.1);
+    transform: translateY(-5px);
+}
+
+.interet-icone {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(99, 81, 206, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--couleur-primaire);
+    font-size: 1.5rem;
+    transition: var(--transition);
+}
+
+.interet-item:hover .interet-icone {
+    background-color: var(--couleur-primaire);
+    color: white;
+}
+
+/* Bouton de retour */
+.bouton-retour {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    background-color: var(--couleur-primaire);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: var(--ombre-box);
+    transition: var(--transition);
+    z-index: 100;
+}
+
+.bouton-retour:hover {
+    background-color: var(--couleur-tertiaire);
+    transform: translateY(-3px);
+}
+
+/* Media Queries */
+@media (max-width: 900px) {
+    .entete-cv {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .info-profil {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .navigation-cv {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+    }
+    
+    .onglet {
+        white-space: nowrap;
+    }
+    
+    .grille-competences {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .actions-cv {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .bouton-telecharger {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .langue-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .interets-grille {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .bouton-retour {
+        left: 1rem;
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+    </style>
+    <div class="conteneur-cv">
+        <div class="entete-cv">
+            <div class="info-profil">
+                <div class="photo-profil">
+                    <img src="../assets/images/bocquet.jpg" alt="Bocquet Mathéo">
+                </div>
+                <div class="details-profil">
+                    <h1>BOCQUET <span>Mathéo</span></h1>
+                    <p class="titre-poste">Alternance en développement informatique</p>
+                    <p class="objectif">Recherche d'une alternance pour l'année scolaire 2025-2026</p>
+                </div>
+            </div>
+            <div class="actions-cv">
+                <a href="cv-bocquet-matheo.pdf" download class="bouton-telecharger">
+                    <i class="fas fa-download"></i> Télécharger CV
+                </a>
+                <button id="bouton-theme" class="bouton-theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="navigation-cv">
+            <button class="onglet actif" data-section="infos-perso">Infos Personnelles</button>
+            <button class="onglet" data-section="formation">Formation</button>
+            <button class="onglet" data-section="experience">Expérience</button>
+            <button class="onglet" data-section="competences">Compétences</button>
+            <button class="onglet" data-section="langues">Langues & Intérêts</button>
+        </div>
+
+        <div class="contenu-cv">
+            <div class="section-cv actif" id="infos-perso">
+                <div class="carte">
+                    <div class="carte-entete">
+                        <i class="fas fa-user"></i>
+                        <h2>Informations Personnelles</h2>
+                    </div>
+                    <div class="carte-corps">
+                        <div class="info-contact">
+                            <div class="item-contact">
+                                <i class="fas fa-envelope"></i>
+                                <span>matheo.bocquet@outlook.fr</span>
+                            </div>
+                            <div class="item-contact">
+                                <i class="fas fa-phone"></i>
+                                <span>06 42 46 53 39</span>
+                            </div>
+                            <div class="item-contact">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>534 Jean Gremillon, Bâtiment A n°329</span>
+                            </div>
+                            <div class="item-contact">
+                                <i class="fas fa-birthday-cake"></i>
+                                <span>Né le 19/05/2005</span>
+                            </div>
+                            <div class="item-contact">
+                                <i class="fas fa-globe"></i>
+                                <span>Français</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carte">
+                    <div class="carte-entete">
+                        <i class="fas fa-briefcase"></i>
+                        <h2>Profil Professionnel</h2>
+                    </div>
+                    <div class="carte-corps">
+                        <p class="texte-presentation">
+                            Actuellement en formation BTS Services Informatiques aux Organisations option SLAM, 
+                            je suis passionné par le développement web et les applications. 
+                            Rigoureux, créatif et autonome, je cherche une alternance pour mettre en pratique 
+                            mes compétences et approfondir mes connaissances dans un environnement professionnel.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 2: Formation -->
+            <div class="section-cv" id="formation">
+                <div class="carte">
+                    <div class="carte-entete">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h2>Parcours Académique</h2>
+                    </div>
+                    <div class="carte-corps">
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-date">
+                                    <span>2023 - 2025</span>
+                                </div>
+                                <div class="timeline-content">
+                                    <h3>BTS Services Informatiques aux Organisations</h3>
+                                    <p class="lieu">Lycée Jean Rostand - Caen</p>
+                                    <p>Spécialité SLAM (Solutions Logicielles et Applications Métiers)</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-date">
+                                    <span>2020 - 2023</span>
+                                </div>
+                                <div class="timeline-content">
+                                    <h3>Baccalauréat Technologique STI2D</h3>
+                                    <p class="lieu">Lycée Villard - Deauville</p>
+                                    <p>Spécialité SIN (Systèmes d'Information et Numérique)</p>
+                                    <div class="mentions">
+                                        <span class="mention">Mention Bien</span>
+                                        <span class="mention">WebSlides régional</span>
+                                        <span class="mention">Médaille d'or</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 3: Expérience -->
+            <div class="section-cv" id="experience">
+                <div class="carte">
+                    <div class="carte-entete">
+                        <i class="fas fa-history"></i>
+                        <h2>Expérience Professionnelle</h2>
+                    </div>
+                    <div class="carte-corps">
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-date">
+                                    <span>13/05/2024 - 14/06/2024</span>
+                                </div>
+                                <div class="timeline-content">
+                                    <h3>Stage en développement web</h3>
+                                    <p class="lieu">Centre Hospitalier Bois Petit - Bayeux</p>
+                                    <ul class="liste-taches">
+                                        <li>Développement d'un site web via le CMS WordPress</li>
+                                        <li>Utilisation du plugin / Référencement SEO</li>
+                                        <li>Création de contenus adaptés au secteur médical</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-date">
+                                    <span>05/01/2025 - 14/02/2025</span>
+                                </div>
+                                <div class="timeline-content">
+                                    <h3>Stage en développement web</h3>
+                                    <p class="lieu">ABC Caen Informatique - Caen</p>
+                                    <ul class="liste-taches">
+                                        <li>Développement d'un site web via le CMS Joomla</li>
+                                        <li>Réalisation d'une application web avec Symfony</li>
+                                        <li>Intégration d'API et services tiers</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 4: Compétences -->
+            <div class="section-cv" id="competences">
+                <div class="carte">
+                    <div class="carte-entete">
+                        <i class="fas fa-code"></i>
+                        <h2>Compétences Techniques</h2>
+                    </div>
+                    <div class="carte-corps">
+                        <div class="grille-competences">
+                            <div class="categorie-competence">
+                                <h3>Langages</h3>
+                                <div class="competences-liste">
+                                    <div class="competence-item">
+                                        <span>PHP</span>
+                                        <div class="niveau-competence">
+                                            <div class="barre" style="width: 85%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="competence-item">
+                                        <span>Symfony</span>
+                                        <div class="niveau-competence">
+                                            <div class="barre" style="width: 80%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="competence-item">
+                                        <span>HTML/CSS</span>
+                                        <div class="niveau-competence">
+                                            <div class="barre" style="width: 90%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="competence-item">
+                                        <span>JavaScript</span>
+                                        <div class="niveau-competence">
+                                            <div class="barre" style="width: 75%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="competence-item">
+                                        <span>Java/JEE</span>
+                                        <div class="niveau-competence">
+                                            <div class="barre" style="width: 70%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="categorie-competence">
+                                <h3>Base de données & Environnements</h3>
+                                <div class="competences-tags">
+                                    <span class="tag-competence">MySQL</span>
+                                    <span class="tag-competence">MariaDB</span>
+                                    <span class="tag-competence">Oracle</span>
+                                    <span class="tag-competence">Debian</span>
+                                    <span class="tag-competence">Apache2</span>
+                                    <span class="tag-competence">Proxmox</span>
+                                    <span class="tag-competence">SSH</span>
+                                </div>
+                            </div>
+                            
+                            <div class="categorie-competence">
+                                <h3>Outils de développement</h3>
+                                <div class="competences-tags">
+                                    <span class="tag-competence">Visual Studio</span>
+                                    <span class="tag-competence">Git/GitHub</span>
+                                    <span class="tag-competence">Docker</span>
+                                    <span class="tag-competence">Figma</span>
+                                </div>
+                            </div>
+                            
+                            <div class="categorie-competence">
+                                <h3>Cybersécurité</h3>
+                                <div class="competences-tags">
+                                    <span class="tag-competence">Cyber Intelligence</span>
+                                    <span class="tag-competence">RGPD</span>
+                                    <span class="tag-competence">Cryptographie</span>
+                                    <span class="tag-competence">Sécurisation Web</span>
+                                    <span class="tag-competence">Pentesting</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carte">
+                    <div class="carte-entete">
+                        <i class="fas fa-tasks"></i>
+                        <h2>Compétences Générales</h2>
+                    </div>
+                    <div class="carte-corps">
+                        <div class="competences-generales">
+                            <div class="competence-item">
+                                <span>Développement web</span>
+                                <div class="niveau-competence">
+                                    <div class="barre" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="competence-item">
+                                <span>Développement d'application</span>
+                                <div class="niveau-competence">
+                                    <div class="barre" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="competence-item">
+                                <span>Gestion de projet</span>
+                                <div class="niveau-competence">
+                                    <div class="barre" style="width: 75%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 5: Langues & Intérêts -->
+            <div class="section-cv" id="langues">
+                <div class="carte">
+                    <div class="carte-entete">
+                        <i class="fas fa-language"></i>
+                        <h2>Langues</h2>
+                    </div>
+                    <div class="carte-corps">
+                        <div class="langues-liste">
+                            <div class="langue-item">
+                                <div class="langue-nom">Français</div>
+                                <div class="langue-niveau">
+                                    <span class="niveau-point actif"></span>
+                                    <span class="niveau-point actif"></span>
+                                    <span class="niveau-point actif"></span>
+                                    <span class="niveau-point actif"></span>
+                                    <span class="niveau-point actif"></span>
+                                    <div class="niveau-texte">Natif</div>
+                                </div>
+                            </div>
+                            <div class="langue-item">
+                                <div class="langue-nom">Anglais</div>
+                                <div class="langue-niveau">
+                                    <span class="niveau-point actif"></span>
+                                    <span class="niveau-point actif"></span>
+                                    <span class="niveau-point actif"></span>
+                                    <span class="niveau-point actif"></span>
+                                    <span class="niveau-point"></span>
+                                    <div class="niveau-texte">Avancé</div>
+                                </div>
+                            </div>
+                            <div class="langue-item">
+                                <div class="langue-nom">Espagnol</div>
+                                <div class="langue-niveau">
+                                    <span class="niveau-point actif"></span>
+                                    <span class="niveau-point actif"></span>
+                                    <span class="niveau-point actif"></span>
+                                    <span class="niveau-point"></span>
+                                    <span class="niveau-point"></span>
+                                    <div class="niveau-texte">Intermédiaire</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carte">
+                    <div class="carte-entete">
+                        <i class="fas fa-heart"></i>
+                        <h2>Centres d'intérêt</h2>
+                    </div>
+                    <div class="carte-corps">
+                        <div class="interets-grille">
+                            <div class="interet-item">
+                                <div class="interet-icone">
+                                    <i class="fas fa-dumbbell"></i>
+                                </div>
+                                <span>Sport</span>
+                            </div>
+                            <div class="interet-item">
+                                <div class="interet-icone">
+                                    <i class="fas fa-laptop-code"></i>
+                                </div>
+                                <span>Informatique</span>
+                            </div>
+                            <div class="interet-item">
+                                <div class="interet-icone">
+                                    <i class="fas fa-music"></i>
+                                </div>
+                                <span>Musique</span>
+                            </div>
+                            <div class="interet-item">
+                                <div class="interet-icone">
+                                    <i class="fas fa-book"></i>
+                                </div>
+                                <span>Lecture</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <a href="../index.html" class="bouton-retour">
+            <i class="fas fa-arrow-left"></i> Retour au portfolio
+        </a>
+    </div>
+    
+    <script>document.addEventListener('DOMContentLoaded', function() {
+        // Gestion des onglets
+        const onglets = document.querySelectorAll('.onglet');
+        const sections = document.querySelectorAll('.section-cv');
+        
+        onglets.forEach(onglet => {
+            onglet.addEventListener('click', function() {
+                // Supprime la classe actif de tous les onglets
+                onglets.forEach(o => o.classList.remove('actif'));
+                
+                // Ajoute la classe actif à l'onglet cliqué
+                this.classList.add('actif');
+                
+                // Récupère la section à afficher
+                const sectionId = this.getAttribute('data-section');
+                
+                // Cache toutes les sections
+                sections.forEach(section => section.classList.remove('actif'));
+                
+                // Affiche la section correspondante
+                document.getElementById(sectionId).classList.add('actif');
+            });
+        });
+        
+        // Gestion du thème clair/sombre
+        const boutonTheme = document.getElementById('bouton-theme');
+        const iconeTheme = boutonTheme.querySelector('i');
+        
+        // Vérifie si un thème est enregistré dans le localStorage
+        const themeEnregistre = localStorage.getItem('theme-cv');
+        
+        if (themeEnregistre === 'sombre') {
+            document.body.classList.add('theme-sombre');
+            iconeTheme.classList.remove('fa-moon');
+            iconeTheme.classList.add('fa-sun');
+        }
+        
+        // Bascule le thème lors du clic sur le bouton
+        boutonTheme.addEventListener('click', function() {
+            document.body.classList.toggle('theme-sombre');
+            
+            if (document.body.classList.contains('theme-sombre')) {
+                iconeTheme.classList.remove('fa-moon');
+                iconeTheme.classList.add('fa-sun');
+                localStorage.setItem('theme-cv', 'sombre');
+            } else {
+                iconeTheme.classList.remove('fa-sun');
+                iconeTheme.classList.add('fa-moon');
+                localStorage.setItem('theme-cv', 'clair');
+            }
+        });
+        
+        // Animation des barres de progression
+        setTimeout(() => {
+            const barresProgression = document.querySelectorAll('.barre');
+            
+            barresProgression.forEach(barre => {
+                const largeurOriginale = barre.style.width;
+                barre.style.width = '0';
+                
+                setTimeout(() => {
+                    barre.style.width = largeurOriginale;
+                }, 300);
+            });
+        }, 500);
+    });</script>
+</body>
+</html>
