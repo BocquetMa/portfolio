@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDIS Web - Application de gestion</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Bocquet Mathéo</div>
+            <a href="../../index.html" class="bouton-retour"><i class="fas fa-arrow-left"></i> Retour au Portfolio</a>
+            <div class="bascule-theme">
+                <input type="checkbox" id="interrupteur-theme" class="input-bascule-theme">
+                <label for="interrupteur-theme" class="etiquette-bascule-theme">
+                    <span class="icone-bascule-theme">☀️</span>
+                </label>
+            </div>
+        </nav>
+    </header>
+
+    <main class="conteneur-projet">
+        <div class="entete-projet">
+            <h1 class="titre-projet">SDIS Web</h1>
+            <p class="sous-titre-projet">Application de gestion pour le Service Départemental d'Incendie et de Secours du Calvados</p>
+            
+            <div class="badges-projet">
+                <span class="badge">Java EE</span>
+                <span class="badge">JSP / HTML / CSS</span>
+                <span class="badge">MariaDB</span>
+            </div>
+        </div>
+
+        <div class="conteneur-image-projet">
+            <img src="../../assets/images/projets/sdisweb.png" alt="Tableau de bord SDIS Web" class="image-projet">
+        </div>
+
+        <div class="contenu-projet">
+            <div class="description-projet">
+                <h2>À propos du projet</h2>
+                <p>SDIS Web est une application complète de gestion pour les services de pompiers, développée spécifiquement pour le SDIS du Calvados. Elle permet de gérer efficacement l'ensemble des ressources humaines et matérielles, ainsi que les interventions des équipes de pompiers sur le terrain.</p>
+                
+                <p>Les fonctionnalités principales incluent :</p>
+                <ul>
+                    <li>Gestion complète des pompiers (fiches individuelles, grades, fonctions)</li>
+                    <li>Suivi des casernes et de leur personnel</li>
+                    <li>Gestion du parc de véhicules et maintenance</li>
+                    <li>Enregistrement et suivi des interventions</li>
+                    <li>Tableau de bord statistique pour les décideurs</li>
+                </ul>
+            </div>
+
+            <div class="details-projet">
+                <h3>Détails techniques</h3>
+                <ul class="liste-info-projet">
+                    <li>
+                        <i class="fas fa-code"></i>
+                        <span><strong>Frontend:</strong> JSP, HTML, CSS, JavaScript</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-server"></i>
+                        <span><strong>Backend:</strong> Java EE 10 (Servlets, DAO)</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-database"></i>
+                        <span><strong>Base de données:</strong> MariaDB</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-calendar"></i>
+                        <span><strong>Durée:</strong> 3 mois</span>
+                    </li>
+                </ul>
+            </div>            
+        </div>
+
+        <div class="galerie-projet">
+            <h2 class="titre-galerie">Galerie du projet</h2>
+            <div class="grille-galerie">
+                <div class="element-galerie">
+                    <img src="../../assets/images/projets/sdisweb/pompier-sdisweb.png" alt="Liste des pompiers" class="image-galerie">
+                </div>
+                <div class="element-galerie">
+                    <img src="../../assets/images/projets/sdisweb/vehicule-sdisweb.png" alt="Gestion des véhicules" class="image-galerie">
+                </div>
+                <div class="element-galerie">
+                    <img src="../../assets/images/projets/sdisweb/intervention-sdisweb.png" alt="Interventions" class="image-galerie">
+                </div>
+            </div>
+        </div>
+
+        <div class="caracteristique-projet">
+            <h2>Défis et Solutions</h2>
+            <p>Le principal défi de ce projet était de concevoir une interface à la fois complète et intuitive pour gérer un grand nombre de données interconnectées (pompiers, casernes, véhicules, interventions). La solution a été de mettre en place une architecture MVC rigoureuse et une navigation claire entre les différentes sections de l'application.</p>
+            
+            <p>Un autre défi résidait dans la gestion des relations complexes entre les entités, notamment pour les interventions qui impliquent plusieurs pompiers et véhicules. Nous avons résolu ce problème en implémentant un système robuste de DAO (Data Access Objects) et en optimisant les requêtes SQL pour maintenir des performances optimales.</p>
+        </div>
+
+        <div class="liens-projet">
+            <a href="https://github.com/BocquetMa/sdisweb" target="_blank" class="lien-projet">
+                <i class="fab fa-github"></i> Voir le code
+            </a>
+        </div>
+
+        <div class="vitrine-fonctionnalites">
+            <h2 class="titre-section">Fonctionnalités détaillées</h2>
+            
+            <div class="element-fonctionnalite">
+                <div class="contenu-fonctionnalite">
+                    <h3>Gestion des pompiers</h3>
+                    <p>Le module de gestion des pompiers permet d'administrer l'ensemble du personnel du SDIS, avec une vue complète de leurs informations personnelles, grades, fonctions et historique d'interventions.</p>
+                    <ul class="points-fonctionnalite">
+                        <li>Consultation de la liste des pompiers par caserne</li>
+                        <li>Fiches détaillées avec informations personnelles et professionnelles</li>
+                        <li>Historique des interventions par pompier</li>
+                    </ul>
+                </div>
+                <div class="demo-fonctionnalite">
+                    <img src="../../assets/images/projets/sdisweb/pompier-sdisweb.png" alt="Gestion des pompiers" class="image-demo">
+                    <div class="superposition-video">
+                        <a href="#" class="bouton-lecture" data-video="../../assets/videos/sdisweb/pompier-sdisweb.mp4">
+                            <i class="fas fa-play"></i> Voir la démo
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="element-fonctionnalite">
+                <div class="contenu-fonctionnalite">
+                    <h3>Gestion des casernes</h3>
+                    <p>Cette fonctionnalité permet de superviser l'ensemble des casernes du département, avec leur personnel et leur matériel affecté, offrant ainsi une vision globale de la répartition des ressources.</p>
+                    <ul class="points-fonctionnalite">
+                        <li>Vue d'ensemble des casernes avec statistiques</li>
+                        <li>Détail du personnel affecté à chaque caserne</li>
+                        <li>Inventaire des véhicules par caserne</li>
+                    </ul>
+                </div>
+                <div class="demo-fonctionnalite">
+                    <img src="../../assets/images/projets/sdisweb/sdisweb-casernes.png" alt="Gestion des casernes" class="image-demo">
+                    <div class="superposition-video">
+                        <a href="#" class="bouton-lecture" data-video="../../assets/videos/sdisweb-casernes.mp4">
+                            <i class="fas fa-play"></i> Voir la démo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="element-fonctionnalite">
+                <div class="contenu-fonctionnalite">
+                    <h3>Gestion des véhicules et équipements</h3>
+                    <p>Ce module permet de suivre l'ensemble du parc automobile du SDIS, avec les dates d'acquisition, de révision, et l'historique d'utilisation lors des interventions.</p>
+                    <ul class="points-fonctionnalite">
+                        <li>Inventaire complet par type de véhicule</li>
+                        <li>Suivi des dates de révision et maintenance</li>
+                        <li>Historique des interventions par véhicule</li>
+                   </ul>
+                </div>
+                <div class="demo-fonctionnalite">
+                    <img src="../../assets/images/projets/sdisweb/sdisweb-vehicules-detail.png" alt="Gestion des véhicules" class="image-demo">
+                    <div class="superposition-video">
+                        <a href="#" class="bouton-lecture" data-video="../../assets/videos/sdisweb-vehicules.mp4">
+                            <i class="fas fa-play"></i> Voir la démo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="element-fonctionnalite">
+                <div class="contenu-fonctionnalite">
+                    <h3>Suivi des interventions</h3>
+                    <p>L'application permet d'enregistrer et de suivre toutes les interventions effectuées par les équipes de pompiers, avec le détail des ressources mobilisées et des délais d'intervention.</p>
+                    <ul class="points-fonctionnalite">
+                        <li>Enregistrement complet des interventions (lieu, date, équipe)</li>
+                        <li>Chronologie détaillée (heure d'appel, d'arrivée, durée)</li>
+                        <li>Classification par type de situation (incendie, secours à personne, etc.)</li>
+                    </ul>
+                </div>                
+                <div class="demo-fonctionnalite">
+                    <img src="../../assets/images/projets/sdisweb/sdisweb-interventions-detail.png" alt="Suivi des interventions" class="image-demo">
+                    <div class="superposition-video">
+                        <a href="#" class="bouton-lecture" data-video="../../assets/videos/sdisweb-interventions.mp4">
+                            <i class="fas fa-play"></i> Voir la démo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="element-fonctionnalite">
+                <div class="contenu-fonctionnalite">
+                    <h3>Système d'authentification et sécurité</h3>
+                        <p>L'application intègre un système d'authentification robuste qui protège les données sensibles et permet une gestion fine des droits d'accès selon les profils utilisateurs.</p>
+                        <ul class="points-fonctionnalite">
+                            <li>Authentification sécurisée des utilisateurs</li>
+                            <li>Différents niveaux d'accès selon les rôles</li>
+                            <li>Protection des données personnelles des pompiers</li>
+                        </ul>
+                </div>
+                <div class="demo-fonctionnalite">
+                    <img src="../../assets/images/projets/sdisweb/sdisweb-login.png" alt="Système d'authentification" class="image-demo">
+                    <div class="superposition-video">
+                        <a href="#" class="bouton-lecture" data-video="../../assets/videos/sdisweb-auth.mp4">
+                            <i class="fas fa-play"></i> Voir la démo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Bocquet Mathéo. Tous droits réservés.</p>
+    </footer>
+
+    <script src="../../js/script.js"></script>
+</body>
+</html>
