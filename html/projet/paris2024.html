@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paris 2024 - Système de Gestion</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Bocquet Mathéo</div>
+            <a href="../../index.html" class="bouton-retour"><i class="fas fa-arrow-left"></i> Retour au Portfolio</a>
+            <div class="bascule-theme">
+                <input type="checkbox" id="interrupteur-theme" class="input-bascule-theme">
+                <label for="interrupteur-theme" class="etiquette-bascule-theme">
+                    <span class="icone-bascule-theme">☀️</span>
+                </label>
+            </div>
+        </nav>
+    </header>
+
+    <main class="conteneur-projet">
+        <div class="entete-projet">
+            <h1 class="titre-projet">Paris 2024 - Système de Gestion</h1>
+            <p class="sous-titre-projet">Une application complète pour l'administration des Jeux Olympiques de Paris 2024</p>
+            
+            <div class="badges-projet">
+                <span class="badge">Spring Boot</span>
+                <span class="badge">Thymeleaf</span>
+                <span class="badge">API REST</span>
+                <span class="badge">MariaDB</span>
+            </div>
+        </div>
+
+        <div class="conteneur-image-projet">
+            <img src="../../assets/images/projets/paris2024/paris2024-dashboard.png" alt="Tableau de bord Paris 2024" class="image-projet">
+        </div>
+
+        <div class="contenu-projet">
+            <div class="description-projet">
+                <h2>À propos du projet</h2>
+                <p>Ce projet est une application complète de gestion pour les Jeux Olympiques de Paris 2024. Elle permet l'administration des athlètes, des sports, des épreuves et des actualités liées à l'événement à travers une interface web conviviale et une API RESTful, offrant une solution robuste pour la gestion des données olympiques.</p>
+                
+                <p>Les fonctionnalités principales incluent :</p>
+                <ul>
+                    <li>Gestion complète des athlètes (ajout, modification, suppression)</li>
+                    <li>Administration des sports olympiques et leurs descriptions</li>
+                    <li>Planification et suivi du calendrier des épreuves</li>
+                    <li>Système de publication et gestion d'actualités</li>
+                    <li>Tableau de bord avec statistiques et indicateurs clés</li>
+                </ul>
+            </div>
+
+            <div class="details-projet">
+                <h3>Détails techniques</h3>
+                <ul class="liste-info-projet">
+                    <li>
+                        <i class="fas fa-code"></i>
+                        <span><strong>Frontend:</strong> Thymeleaf, Bootstrap, HTML/CSS/JS</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-server"></i>
+                        <span><strong>Backend:</strong> Spring Boot, Spring Data JPA</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-database"></i>
+                        <span><strong>Base de données:</strong> MariaDB</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-cogs"></i>
+                        <span><strong>Architecture:</strong> API RESTful + Client Web</span>
+                    </li>
+                </ul>
+            </div>            
+        </div>
+
+        <div class="galerie-projet">
+            <h2 class="titre-galerie">Galerie du projet</h2>
+            <div class="grille-galerie">
+                <div class="element-galerie">
+                    <img src="../../assets/images/projets/paris2024/paris2024-athletes.png" alt="Gestion des athlètes" class="image-galerie">
+                </div>
+                <div class="element-galerie">
+                    <img src="../../assets/images/projets/paris2024/paris2024-sports.png" alt="Gestion des sports" class="image-galerie">
+                </div>
+                <div class="element-galerie">
+                    <img src="../../assets/images/projets/paris2024/paris2024-epreuves.png" alt="Gestion des épreuves" class="image-galerie">
+                </div>
+            </div>
+        </div>
+
+        <div class="caracteristique-projet">
+            <h2>Défis et Solutions</h2>
+            <p>L'un des principaux défis de ce projet était de créer une architecture claire séparant l'API et l'interface utilisateur tout en maintenant une communication efficace entre les deux. La solution a été d'implémenter un design en couches avec des proxys bien définis pour les appels API, garantissant une maintenance simplifiée et une évolution indépendante des deux composants.</p>
+            
+            <p>Un autre défi concernait la gestion des relations complexes entre les différentes entités (athlètes, sports, épreuves, pays). Nous avons résolu ce problème en développant un modèle de données relationnel robuste et en utilisant efficacement les capacités de mapping objet-relationnel de Spring Data JPA.</p>
+        </div>
+
+        <div class="liens-projet">
+            <a href="https://github.com/BocquetMa/paris2024" target="_blank" class="lien-projet">
+                <i class="fab fa-github"></i> Voir le code
+            </a>
+        </div>
+
+        <div class="vitrine-fonctionnalites">
+            <h2 class="titre-section">Fonctionnalités détaillées</h2>
+            
+            <div class="element-fonctionnalite">
+                <div class="contenu-fonctionnalite">
+                    <h3>Gestion des Athlètes</h3>
+                    <p>L'application permet de gérer l'ensemble des athlètes participant aux Jeux Olympiques avec leurs informations personnelles, leurs pays d'origine et les sports qu'ils pratiquent.</p>
+                    <ul class="points-fonctionnalite">
+                        <li>Ajout, modification et suppression d'athlètes</li>
+                        <li>Association à un pays et un sport</li>
+                        <li>Inscription aux différentes épreuves</li>
+                    </ul>
+                </div>
+                <div class="demo-fonctionnalite">
+                    <img src="../../assets/images/projets/paris2024/paris2024-athletes-detail.png" alt="Détail de la gestion des athlètes" class="image-demo">
+                </div>
+            </div>
+            
+            <div class="element-fonctionnalite">
+                <div class="contenu-fonctionnalite">
+                    <h3>Administration des Sports</h3>
+                    <p>Le module de gestion des sports permet d'administrer tous les sports au programme des Jeux Olympiques avec leur description et leurs caractéristiques.</p>
+                    <ul class="points-fonctionnalite">
+                        <li>Interface visuelle de gestion des sports</li>
+                        <li>Catégorisation et description détaillée</li>
+                        <li>Association avec les épreuves correspondantes</li>
+                    </ul>
+                </div>
+                <div class="demo-fonctionnalite">
+                    <img src="../../assets/images/projets/paris2024/paris2024-sports-detail.png" alt="Détail de la gestion des sports" class="image-demo">
+                </div>
+            </div>
+
+            <div class="element-fonctionnalite">
+                <div class="contenu-fonctionnalite">
+                    <h3>Calendrier des Épreuves</h3>
+                    <p>Cette fonctionnalité permet de planifier et visualiser l'ensemble des épreuves des Jeux Olympiques avec leurs dates de début et de fin, créant ainsi un calendrier complet de l'événement.</p>
+                    <ul class="points-fonctionnalite">
+                        <li>Planification temporelle des épreuves</li>
+                        <li>Vue calendrier et vue liste des épreuves</li>
+                        <li>Filtrage par date, sport ou type d'épreuve</li>
+                   </ul>
+                </div>
+                <div class="demo-fonctionnalite">
+                    <img src="../../assets/images/projets/paris2024/paris2024-epreuves-detail.png" alt="Calendrier des épreuves" class="image-demo">
+                </div>
+            </div>
+
+            <div class="element-fonctionnalite">
+                <div class="contenu-fonctionnalite">
+                    <h3>Gestion des Actualités</h3>
+                    <p>Le système de gestion des actualités permet de publier et gérer des informations liées aux Jeux Olympiques, créant ainsi un flux d'informations à destination des utilisateurs.</p>
+                    <ul class="points-fonctionnalite">
+                        <li>Création et édition d'actualités</li>
+                        <li>Association à des sports ou épreuves spécifiques</li>
+                        <li>Publication avec date et contenu formaté</li>
+                    </ul>
+                </div>                
+                <div class="demo-fonctionnalite">
+                    <img src="../../assets/images/projets/paris2024/paris2024-actualites.png" alt="Gestion des actualités" class="image-demo">
+                </div>
+            </div>
+
+            <div class="element-fonctionnalite">
+                <div class="contenu-fonctionnalite">
+                    <h3>API RESTful</h3>
+                    <p>L'application est construite sur une API RESTful complète, documentée avec Swagger/OpenAPI, qui permet l'accès programmatique à toutes les fonctionnalités du système.</p>
+                    <ul class="points-fonctionnalite">
+                        <li>Endpoints pour toutes les entités principales</li>
+                        <li>Documentation interactive avec Swagger</li>
+                        <li>Architecture évolutive permettant l'intégration avec d'autres systèmes</li>
+                    </ul>
+                </div>
+                <div class="demo-fonctionnalite">
+                    <img src="../../assets/images/projets/paris2024/paris2024-api.png" alt="Documentation API" class="image-demo">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Bocquet Mathéo. Tous droits réservés.</p>
+    </footer>
+
+    <script src="../../js/script.js"></script>
+</body>
+</html>
