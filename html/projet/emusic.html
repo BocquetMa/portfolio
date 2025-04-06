@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emusic - WebApp</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Bocquet Mathéo</div>
+            <a href="../../index.html" class="bouton-retour"><i class="fas fa-arrow-left"></i> Retour au Portfolio</a>
+            <div class="bascule-theme">
+                <input type="checkbox" id="interrupteur-theme" class="input-bascule-theme">
+                <label for="interrupteur-theme" class="etiquette-bascule-theme">
+                    <span class="icone-bascule-theme">☀️</span>
+                </label>
+            </div>
+        </nav>
+    </header>
+
+    <main class="conteneur-projet">
+        <div class="entete-projet">
+            <h1 class="titre-projet">Emusic - WebApp</h1>
+            <p class="sous-titre-projet">Application de gestion d'école de musique pour l'administration des cours, élèves et instruments</p>
+            
+            <div class="badges-projet">
+                <span class="badge">Symfony</span>
+                <span class="badge">Twig</span>
+                <span class="badge">HTML / CSS / Js</span>
+                <span class="badge">MySQL</span>
+            </div>
+        </div>
+
+        <div class="conteneur-image-projet">
+            <img src="../../assets/images/projets/emusic/emusic-dashboard.png" alt="Aperçu du tableau de bord Emusic" class="image-projet">
+        </div>
+
+        <div class="contenu-projet">
+            <div class="description-projet">
+                <h2>À propos du projet</h2>
+                <p>Emusic est une application web développée avec le framework Symfony destinée à la gestion d'une école de musique. Cette plateforme permet aux administrateurs et enseignants de gérer l'ensemble des ressources et activités de l'école : instruments, cours, élèves, professeurs, et inscriptions.</p>
+                
+                <p>Les fonctionnalités principales incluent :</p>
+                <ul>
+                    <li>Gestion complète des instruments et accessoires (inventaire, suivi des prêts, maintenance)</li>
+                    <li>Administration des cours et planning des professeurs</li>
+                    <li>Système d'inscriptions des élèves et suivi des paiements</li>
+                    <li>Gestion des quotients familiaux et tarification adaptée</li>
+                    <li>Système d'authentification et gestion des permissions selon différents rôles</li>
+                </ul>
+            </div>
+
+            <div class="details-projet">
+                <h3>Détails techniques</h3>
+                <ul class="liste-info-projet">
+                    <li>
+                        <i class="fas fa-code"></i>
+                        <span><strong>Frontend:</strong> HTML, CSS, JavaScript (Symfony Twig)</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-server"></i>
+                        <span><strong>Backend:</strong> PHP (Symfony 6.4)</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-database"></i>
+                        <span><strong>Base de données:</strong> MySQL</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-shield-alt"></i>
+                        <span><strong>Sécurité:</strong> Symfony Security Bundle, CSRF Protection</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-calendar"></i>
+                        <span><strong>Durée:</strong> 3 mois</span>
+                    </li>
+                </ul>
+            </div>            
+        </div>
+
+        <div class="galerie-projet">
+            <h2 class="titre-galerie">Galerie du projet</h2>
+            <div class="grille-galerie">
+                <div class="element-galerie">
+                    <img src="../../assets/images/projets/emusic/emusic-instruments.png" alt="Gestion des instruments" class="image-galerie">
+                </div>
+                <div class="element-galerie">
+                    <img src="../../assets/images/projets/emusic/emusic-cours.png" alt="Planning des cours" class="image-galerie">
+                </div>
+                <div class="element-galerie">
+                    <img src="../../assets/images/projets/emusic/emusic-eleves.png" alt="Gestion des élèves" class="image-galerie">
+                </div>
+            </div>
+        </div>
+
+        <div class="caracteristique-projet">
+            <h2>Défis et Solutions</h2>
+            <p>L'un des principaux défis de ce projet était de mettre en place un système de gestion relationnel complexe entre les différentes entités (élèves, professeurs, cours, instruments). La solution a été d'utiliser l'ORM Doctrine pour créer une architecture de base de données robuste et cohérente.</p>
+            
+            <p>Un autre défi important concernait la gestion des tarifications variables selon les quotients familiaux et types de cours. Nous avons implémenté un système flexible permettant aux administrateurs de configurer les différentes tranches tarifaires et d'automatiser le calcul des montants lors des inscriptions.</p>
+        </div>
+
+        <div class="liens-projet">
+            <a href="https://github.com/BocquetMa/emusic" target="_blank" class="lien-projet">
+                <i class="fab fa-github"></i> Voir le code
+            </a>
+        </div>
+
+        <div class="vitrine-fonctionnalites">
+            <h2 class="titre-section">Fonctionnalités détaillées</h2>
+            
+            <div class="element-fonctionnalite">
+                <div class="contenu-fonctionnalite">
+                    <h3>Gestion des instruments et prêts</h3>
+                    <p>Le système permet un suivi complet du parc instrumental de l'école avec historique des prêts et interventions de maintenance.</p>
+                    <ul class="points-fonctionnalite">
+                        <li>Inventaire détaillé par types et classes d'instruments</li>
+                        <li>Suivi des prêts aux élèves avec dates et états</li>
+                        <li>Gestion des accessoires associés aux instruments</li>
+                        <li>Historique des interventions et réparations</li>
+                    </ul>
+                </div>
+                <div class="demo-fonctionnalite">
+                    <img src="../../assets/images/projets/emusic/emusic-prets.png" alt="Gestion des prêts d'instruments" class="image-demo">
+                    <div class="superposition-video">
+                        <a href="#" class="bouton-lecture" data-video="../../assets/videos/emusic-instruments.mp4">
+                            <i class="fas fa-play"></i> Voir la démo
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="element-fonctionnalite">
+                <div class="contenu-fonctionnalite">
+                    <h3>Planification des cours et emploi du temps</h3>
+                    <p>L'application offre une interface intuitive pour visualiser et gérer les plannings des cours, professeurs et salles.</p>
+                    <ul class="points-fonctionnalite">
+                        <li>Vue hebdomadaire des cours par jour</li>
+                        <li>Filtrage par type de cours et instrument</li>
+                        <li>Interface d'emploi du temps pour les professeurs</li>
+                        <li>Système d'inscription aux cours pour les élèves</li>
+                    </ul>
+                </div>
+                <div class="demo-fonctionnalite">
+                    <img src="../../assets/images/projets/emusic/emusic-planning.png" alt="Planification des cours" class="image-demo">
+                    <div class="superposition-video">
+                        <a href="#" class="bouton-lecture" data-video="../../assets/videos/emusic-planning.mp4">
+                            <i class="fas fa-play"></i> Voir la démo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="element-fonctionnalite">
+                <div class="contenu-fonctionnalite">
+                    <h3>Gestion des inscriptions et paiements</h3>
+                    <p>Le système permet de gérer les inscriptions des élèves aux différents cours et de suivre les paiements associés.</p>
+                    <ul class="points-fonctionnalite">
+                        <li>Interface d'inscription avec sélection des cours</li>
+                        <li>Calcul automatique des tarifs selon le quotient familial</li>
+                        <li>Suivi des paiements échelonnés</li>
+                        <li>Génération de factures et attestations</li>
+                    </ul>
+                </div>
+                <div class="demo-fonctionnalite">
+                    <img src="../../assets/images/projets/emusic/emusic-inscriptions.png" alt="Gestion des inscriptions" class="image-demo">
+                    <div class="superposition-video">
+                        <a href="#" class="bouton-lecture" data-video="../../assets/videos/emusic-inscriptions.mp4">
+                            <i class="fas fa-play"></i> Voir la démo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="element-fonctionnalite">
+                <div class="contenu-fonctionnalite">
+                    <h3>Gestion des professeurs et spécialités</h3>
+                    <p>L'application permet d'administrer les profils des professeurs, leurs spécialités instrumentales et leurs disponibilités.</p>
+                    <ul class="points-fonctionnalite">
+                        <li>Profils détaillés des professeurs et compétences</li>
+                        <li>Association avec les types d'instruments enseignés</li>
+                        <li>Visualisation de l'emploi du temps personnalisé</li>
+                        <li>Suivi des heures effectuées</li>
+                    </ul>
+                </div>
+                <div class="demo-fonctionnalite">
+                    <img src="../../assets/images/projets/emusic/emusic-professeurs.png" alt="Gestion des professeurs" class="image-demo">
+                    <div class="superposition-video">
+                        <a href="#" class="bouton-lecture" data-video="../../assets/videos/emusic-professeurs.mp4">
+                            <i class="fas fa-play"></i> Voir la démo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="element-fonctionnalite">
+                <div class="contenu-fonctionnalite">
+                    <h3>Authentification et gestion des rôles</h3>
+                    <p>Le système implémente une gestion fine des permissions basée sur différents rôles d'utilisateurs.</p>
+                    <ul class="points-fonctionnalite">
+                        <li>Trois rôles principaux : administrateur, professeur, élève/parent</li>
+                        <li>Interfaces adaptées selon le rôle connecté</li>
+                        <li>Système de création de compte avec validation</li>
+                        <li>Protection des routes et fonctionnalités sensibles</li>
+                    </ul>
+                </div>
+                <div class="demo-fonctionnalite">
+                    <img src="../../assets/images/projets/emusic/emusic-security.png" alt="Système d'authentification" class="image-demo">
+                    <div class="superposition-video">
+                        <a href="#" class="bouton-lecture" data-video="../../assets/videos/emusic-security.mp4">
+                            <i class="fas fa-play"></i> Voir la démo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Bocquet Mathéo. Tous droits réservés.</p>
+    </footer>
+
+    <script src="../../js/script.js"></script>
+</body>
+</html>
