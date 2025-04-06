@@ -12,9 +12,9 @@ function initialiserAnimation() {
     if (!elementTexteAnime) return;
 
     const textes = [
-        'Développeur Web Fullstack',
-        'Passionné par l\'Innovation',
-        'Créateur d\'Expériences Numériques'
+        'Jeune développeur web Fullstack',
+        'Passionné par l\'informatique et le développement',
+        'Créateur d\'applications et de sites web'
     ];
     
     let indexTexte = 0;
@@ -103,7 +103,7 @@ function initialiserProjets() {
             titre: "Emusic - Gestion d'école de musique",
             description: "Application pour gérer une école de musique : inscriptions, professeurs, cours, instruments et prêts de matériel.",
             technologies: ["Symfony", "Twig", "MySQL", "Bootstrap"],
-            imageUrl: "assets/images/projets/emusic/emusic-dashboard.png",
+            imageUrl: "assets/images/projets/emuusic.png",
             lienGithub: "https://github.com/BocquetMa/emusic",
             lienDemo: "html/projet/emusic.html"
         },
@@ -111,8 +111,8 @@ function initialiserProjets() {
             titre: "Paris 2024 - Système de Gestion",
             description: "Application de gestion pour les Jeux Olympiques permettant d'administrer les athlètes, épreuves et actualités.",
             technologies: ["Spring Boot", "Thymeleaf", "API REST", "MariaDB"],
-            imageUrl: "assets/images/projets/paris2024/paris2024-dashboard.png",
-            lienGithub: "https://github.com/BocquetMa/paris2024",
+            imageUrl: "assets/images/projets/paris2024.png",
+            lienGithub: "https://github.com/BocquetMa/paris2024webapp",
             lienDemo: "html/projet/paris2024.html"
         }
     ];
@@ -141,36 +141,75 @@ function initialiserProjets() {
 }
 
 function initialiserTheme() {
-    const interrupteurTheme = document.getElementById('theme-switch');
-    if (interrupteurTheme) {
-        const iconeTheme = document.querySelector('.theme-switch-icon');
-        
-        const themeEnregistre = localStorage.getItem('theme');
-        
-        if (themeEnregistre === 'clair') {
-            document.body.classList.add('mode-clair');
-            interrupteurTheme.checked = true;
-            if (iconeTheme) iconeTheme.textContent = '🌙';
+    const boutonTheme = document.getElementById('bouton-theme');
+    if (!boutonTheme) return;
+    
+    const iconeTheme = boutonTheme.querySelector('i');
+    
+    const prefereThemeSombre = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    let themeEnregistre = localStorage.getItem('theme');
+    
+    if (!themeEnregistre) {
+        themeEnregistre = prefereThemeSombre ? 'sombre' : 'clair';
+        localStorage.setItem('theme', themeEnregistre);
+    }
+    
+    if (themeEnregistre === 'clair') {
+        document.body.classList.add('mode-clair');
+        if (iconeTheme) {
+            iconeTheme.classList.remove('fa-moon');
+            iconeTheme.classList.add('fa-sun');
         }
+    } else {
+        document.body.classList.remove('mode-clair');
+        if (iconeTheme) {
+            iconeTheme.classList.remove('fa-sun');
+            iconeTheme.classList.add('fa-moon');
+        }
+    }
+    
+    document.body.classList.add('transition-theme');
+    
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        const nouveauTheme = e.matches ? 'sombre' : 'clair';
         
-        interrupteurTheme.addEventListener('change', function() {
-            document.body.classList.toggle('mode-clair');
-            
-            if (document.body.classList.contains('mode-clair')) {
-                localStorage.setItem('theme', 'clair');
-                if (iconeTheme) iconeTheme.textContent = '🌙';
-            } else {
-                localStorage.setItem('theme', 'sombre');
-                if (iconeTheme) iconeTheme.textContent = '☀️';
+        const themeExplicite = localStorage.getItem('theme-explicite');
+        if (!themeExplicite) {
+            appliquerTheme(nouveauTheme);
+            localStorage.setItem('theme', nouveauTheme);
+        }
+    });
+    
+    boutonTheme.addEventListener('click', function() {
+        const actuelTheme = document.body.classList.contains('mode-clair') ? 'clair' : 'sombre';
+        const nouveauTheme = actuelTheme === 'clair' ? 'sombre' : 'clair';
+        
+        appliquerTheme(nouveauTheme);
+        
+        localStorage.setItem('theme-explicite', 'true');
+        localStorage.setItem('theme', nouveauTheme);
+    });
+    
+    function appliquerTheme(theme) {
+        if (theme === 'clair') {
+            document.body.classList.add('mode-clair');
+            if (iconeTheme) {
+                iconeTheme.classList.remove('fa-moon');
+                iconeTheme.classList.add('fa-sun');
             }
-        });
+        } else {
+            document.body.classList.remove('mode-clair');
+            if (iconeTheme) {
+                iconeTheme.classList.remove('fa-sun');
+                iconeTheme.classList.add('fa-moon');
+            }
+        }
     }
     
     const interrupteurThemeProjet = document.getElementById('interrupteur-theme');
     if (interrupteurThemeProjet) {
         const iconeThemeProjet = document.querySelector('.icone-bascule-theme');
-        
-        const themeEnregistre = localStorage.getItem('theme');
         
         if (themeEnregistre === 'clair') {
             document.body.classList.add('mode-clair');
@@ -183,9 +222,11 @@ function initialiserTheme() {
             
             if (document.body.classList.contains('mode-clair')) {
                 localStorage.setItem('theme', 'clair');
+                localStorage.setItem('theme-explicite', 'true');
                 if (iconeThemeProjet) iconeThemeProjet.textContent = '🌙';
             } else {
                 localStorage.setItem('theme', 'sombre');
+                localStorage.setItem('theme-explicite', 'true');
                 if (iconeThemeProjet) iconeThemeProjet.textContent = '☀️';
             }
         });

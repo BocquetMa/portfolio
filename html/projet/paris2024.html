@@ -35,7 +35,7 @@
         </div>
 
         <div class="conteneur-image-projet">
-            <img src="../../assets/images/projets/paris2024/paris2024-dashboard.png" alt="Tableau de bord Paris 2024" class="image-projet">
+            <img src="../../assets/images/projets/paris2024.png" alt="Tableau de bord Paris 2024" class="image-projet">
         </div>
 
         <div class="contenu-projet">
@@ -80,13 +80,13 @@
             <h2 class="titre-galerie">Galerie du projet</h2>
             <div class="grille-galerie">
                 <div class="element-galerie">
-                    <img src="../../assets/images/projets/paris2024/paris2024-athletes.png" alt="Gestion des athlètes" class="image-galerie">
+                    <img src="../../assets/images/projets/paris2024/paris2024-athlete.png" alt="Gestion des athlètes" class="image-galerie">
                 </div>
                 <div class="element-galerie">
-                    <img src="../../assets/images/projets/paris2024/paris2024-sports.png" alt="Gestion des sports" class="image-galerie">
+                    <img src="../../assets/images/projets/paris2024/paris2024-sport.png" alt="Gestion des sports" class="image-galerie">
                 </div>
                 <div class="element-galerie">
-                    <img src="../../assets/images/projets/paris2024/paris2024-epreuves.png" alt="Gestion des épreuves" class="image-galerie">
+                    <img src="../../assets/images/projets/paris2024/paris2024-epreuve.png" alt="Gestion des épreuves" class="image-galerie">
                 </div>
             </div>
         </div>
@@ -118,10 +118,25 @@
                     </ul>
                 </div>
                 <div class="demo-fonctionnalite">
-                    <img src="../../assets/images/projets/paris2024/paris2024-athletes-detail.png" alt="Détail de la gestion des athlètes" class="image-demo">
+                    <img src="../../assets/images/projets/paris2024/paris2024-athlete.png" alt="Ajout d'un athlète" class="image-demo">
                 </div>
             </div>
-            
+
+            <div class="element-fonctionnalite">
+                <div class="contenu-fonctionnalite">
+                    <h3>Gestion des Épreuves</h3>
+                    <p>Cette fonctionnalité permet de planifier et visualiser l'ensemble des épreuves des Jeux Olympiques avec leurs dates de début et de fin, créant ainsi un calendrier complet de l'événement.</p>
+                    <ul class="points-fonctionnalite">
+                        <li>Planification temporelle des épreuves</li>
+                        <li>Vue calendrier et vue liste des épreuves</li>
+                        <li>Filtrage par date, sport ou type d'épreuve</li>
+                   </ul>
+                </div>
+                <div class="demo-fonctionnalite">
+                    <img src="../../assets/images/projets/paris2024/paris2024-epreuve.png" alt="Gestion des épreuves" class="image-demo">
+                </div>
+            </div>
+
             <div class="element-fonctionnalite">
                 <div class="contenu-fonctionnalite">
                     <h3>Administration des Sports</h3>
@@ -133,37 +148,21 @@
                     </ul>
                 </div>
                 <div class="demo-fonctionnalite">
-                    <img src="../../assets/images/projets/paris2024/paris2024-sports-detail.png" alt="Détail de la gestion des sports" class="image-demo">
+                    <img src="../../assets/images/projets/paris2024/paris2024-sport.png" alt="Gestion des sports" class="image-demo">
                 </div>
             </div>
 
             <div class="element-fonctionnalite">
                 <div class="contenu-fonctionnalite">
-                    <h3>Calendrier des Épreuves</h3>
-                    <p>Cette fonctionnalité permet de planifier et visualiser l'ensemble des épreuves des Jeux Olympiques avec leurs dates de début et de fin, créant ainsi un calendrier complet de l'événement.</p>
-                    <ul class="points-fonctionnalite">
-                        <li>Planification temporelle des épreuves</li>
-                        <li>Vue calendrier et vue liste des épreuves</li>
-                        <li>Filtrage par date, sport ou type d'épreuve</li>
-                   </ul>
-                </div>
-                <div class="demo-fonctionnalite">
-                    <img src="../../assets/images/projets/paris2024/paris2024-epreuves-detail.png" alt="Calendrier des épreuves" class="image-demo">
-                </div>
-            </div>
-
-            <div class="element-fonctionnalite">
-                <div class="contenu-fonctionnalite">
-                    <h3>Gestion des Actualités</h3>
+                    <h3>Ajout d'un athlète</h3>
                     <p>Le système de gestion des actualités permet de publier et gérer des informations liées aux Jeux Olympiques, créant ainsi un flux d'informations à destination des utilisateurs.</p>
                     <ul class="points-fonctionnalite">
-                        <li>Création et édition d'actualités</li>
-                        <li>Association à des sports ou épreuves spécifiques</li>
-                        <li>Publication avec date et contenu formaté</li>
+                        <li>Création d'un athlète</li>
+                        <li>Association à des sports spécifiques</li>
                     </ul>
                 </div>                
                 <div class="demo-fonctionnalite">
-                    <img src="../../assets/images/projets/paris2024/paris2024-actualites.png" alt="Gestion des actualités" class="image-demo">
+                    <img src="../../assets/images/projets/paris2024/paris2024-ajouter.png" alt="Gestion des actualités" class="image-demo">
                 </div>
             </div>
 
@@ -178,10 +177,48 @@
                     </ul>
                 </div>
                 <div class="demo-fonctionnalite">
-                    <img src="../../assets/images/projets/paris2024/paris2024-api.png" alt="Documentation API" class="image-demo">
+                    <div class="api-documentation">
+                        <h3><i class="fas fa-code"></i> Documentation API</h3>
+                        <div class="api-endpoints">
+                            <div class="endpoint">
+                                <span class="method get">GET</span>
+                                <span class="path">/athletes</span>
+                                <span class="description">Obtenir tous les athlètes</span>
+                            </div>
+                            <div class="endpoint">
+                                <span class="method get">GET</span>
+                                <span class="path">/athlete/{id}</span>
+                                <span class="description">Obtenir un athlète par ID</span>
+                            </div>
+                            <div class="endpoint">
+                                <span class="method post">POST</span>
+                                <span class="path">/athlete</span>
+                                <span class="description">Créer un nouvel athlète</span>
+                            </div>
+                            <div class="endpoint">
+                                <span class="method put">PUT</span>
+                                <span class="path">/athlete/{id}</span>
+                                <span class="description">Mettre à jour un athlète</span>
+                            </div>
+                            <div class="endpoint">
+                                <span class="method delete">DELETE</span>
+                                <span class="path">/athlete/{id}</span>
+                                <span class="description">Supprimer un athlète</span>
+                            </div>
+                            <div class="endpoint">
+                                <span class="method get">GET</span>
+                                <span class="path">/sports</span>
+                                <span class="description">Obtenir tous les sports</span>
+                            </div>
+                            <div class="endpoint">
+                                <span class="method get">GET</span>
+                                <span class="path">/epreuves</span>
+                                <span class="description">Obtenir toutes les épreuves</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
     </main>
 
     <footer>
