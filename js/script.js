@@ -84,28 +84,36 @@ function initialiserProjets() {
 
     const projets = [
         {
-            titre: "Application de formation",
-            description: "Application web pour l'entreprise ABCCI, permettant de présenter les formations, effectuer des quiz et bien plus encore",
+            titre: "Application de formation ABCCI",
+            description: "Application web pour l'entreprise ABCCI, permettant de gérer les formations, d'effectuer des quiz et d'échanger via une messagerie interne.",
             technologies: ["HTML5", "CSS3", "JavaScript", "Symfony6", "MySQL"],
-            imageUrl: "assets/images/projets/abcci.png",
+            imageUrl: "assets/images/projets/abcci/abcci-profil.png",
             lienGithub: "https://github.com/BocquetMa/abcci",
-            lienDemo: "file:///C:/xampp/htdocs/portfolio/html/projet/abcci.html"
+            lienDemo: "html/projet/abcci.html"
         },
         {
-            titre: "Application de gestion",
-            description: "Application web de gestion pour le Service Départemental d'Incendie et de Secours du Calvados",
+            titre: "SDIS Web",
+            description: "Application de gestion pour le Service Départemental d'Incendie et de Secours du Calvados. Gestion des pompiers, véhicules et interventions.",
             technologies: ["Java EE", "JSP", "HTML5", "JavaScript", "MariaDB"],
             imageUrl: "assets/images/projets/sdisweb.png",
             lienGithub: "https://github.com/BocquetMa/sdisweb",
-            lienDemo: "file:///C:/xampp/htdocs/portfolio/html/projet/sdisweb.html"
+            lienDemo: "html/projet/sdisweb.html"
         },
         {
-            titre: "Tableau de Bord Analytics",
-            description: "Tableau de bord interactif pour visualiser des données complexes en temps réel.",
-            technologies: ["Vue.js", "D3.js", "Firebase", "Chart.js"],
-            imageUrl: "assets/images/projects/dashboard.jpg",
-            lienGithub: "https://github.com/votrenom/analytics-dashboard",
-            lienDemo: "https://votre-dashboard.vercel.app"
+            titre: "Emusic - Gestion d'école de musique",
+            description: "Application pour gérer une école de musique : inscriptions, professeurs, cours, instruments et prêts de matériel.",
+            technologies: ["Symfony", "Twig", "MySQL", "Bootstrap"],
+            imageUrl: "assets/images/projets/emusic/emusic-dashboard.png",
+            lienGithub: "https://github.com/BocquetMa/emusic",
+            lienDemo: "html/projet/emusic.html"
+        },
+        {
+            titre: "Paris 2024 - Système de Gestion",
+            description: "Application de gestion pour les Jeux Olympiques permettant d'administrer les athlètes, épreuves et actualités.",
+            technologies: ["Spring Boot", "Thymeleaf", "API REST", "MariaDB"],
+            imageUrl: "assets/images/projets/paris2024/paris2024-dashboard.png",
+            lienGithub: "https://github.com/BocquetMa/paris2024",
+            lienDemo: "html/projet/paris2024.html"
         }
     ];
 
